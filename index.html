@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css">
+  <title>Snake Game</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+
+  <meta name="theme-color" content="#111111" />
 </head>
 <body>
 
-    <h1>🐍 Snake Game</h1>
+  <h1>🐍 Snake Game</h1>
 
-    <canvas id="gameCanvas" width="600" height="600"></canvas>
+  <canvas id="gameCanvas" width="600" height="600"></canvas>
 
-    <p id="score">Score: 0</p>
+  <p id="score">Score: 0</p>
 
-    <p>Use the Arrow Keys to Control the Snake</p>
+  <div class="controls">
+    <button onclick="changeDirectionByButton('UP')">⬆️</button>
 
-    <button onclick="restartGame()">Restart Game</button>
+    <div>
+      <button onclick="changeDirectionByButton('LEFT')">⬅️</button>
+      <button onclick="changeDirectionByButton('DOWN')">⬇️</button>
+      <button onclick="changeDirectionByButton('RIGHT')">➡️</button>
+    </div>
+  </div>
 
-    <footer class="footer">
-        <p>© 2026 Developed and Maintained by <strong>Spark Industry</strong>. All Rights Reserved.</p>
-    </footer>
+  <button class="restart-btn" onclick="restartGame()">Restart Game</button>
 
-    <script src="script.js"></script>
+  <footer class="footer">
+    <p>© 2026 Developed and Maintained by <strong>Spark Industry</strong>. All Rights Reserved.</p>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

@@ -19,18 +19,18 @@ let food = {
 let direction = "RIGHT";
 let gameOver = false;
 
-document.addEventListener("keydown", changeDirection);
+document.addEventListener("keydown", function(event) {
+  if (event.key === "ArrowUp") changeDirectionByButton("UP");
+  if (event.key === "ArrowDown") changeDirectionByButton("DOWN");
+  if (event.key === "ArrowLeft") changeDirectionByButton("LEFT");
+  if (event.key === "ArrowRight") changeDirectionByButton("RIGHT");
+});
 
-function changeDirection(event) {
-  if (event.key === "ArrowUp" && direction !== "DOWN") {
-    direction = "UP";
-  } else if (event.key === "ArrowDown" && direction !== "UP") {
-    direction = "DOWN";
-  } else if (event.key === "ArrowLeft" && direction !== "RIGHT") {
-    direction = "LEFT";
-  } else if (event.key === "ArrowRight" && direction !== "LEFT") {
-    direction = "RIGHT";
-  }
+function changeDirectionByButton(newDirection) {
+  if (newDirection === "UP" && direction !== "DOWN") direction = "UP";
+  if (newDirection === "DOWN" && direction !== "UP") direction = "DOWN";
+  if (newDirection === "LEFT" && direction !== "RIGHT") direction = "LEFT";
+  if (newDirection === "RIGHT" && direction !== "LEFT") direction = "RIGHT";
 }
 
 function drawGame() {
@@ -39,7 +39,7 @@ function drawGame() {
     ctx.font = "40px Arial";
     ctx.fillText("Game Over", 190, 280);
     ctx.font = "24px Arial";
-    ctx.fillText("Click Restart to Play Again", 165, 320);
+    ctx.fillText("Click Restart", 220, 320);
     return;
   }
 
@@ -48,7 +48,6 @@ function drawGame() {
   for (let i = 0; i < snake.length; i++) {
     ctx.fillStyle = i === 0 ? "lime" : "white";
     ctx.fillRect(snake[i].x, snake[i].y, box, box);
-
     ctx.strokeStyle = "black";
     ctx.strokeRect(snake[i].x, snake[i].y, box, box);
   }
@@ -122,3 +121,7 @@ function restartGame() {
 }
 
 setInterval(drawGame, 100);
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
