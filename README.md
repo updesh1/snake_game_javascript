@@ -1,8 +1,8 @@
-# 🐍 Snake Game (JavaScript)
+# Snake Game (JavaScript)
 
 A classic Snake Game built using **HTML5, CSS3, and JavaScript**. Control the snake using the arrow keys, eat food to increase your score, and avoid colliding with the walls or yourself.
 
-## 🎮 Live Demo
+## Live Demo
 
 After enabling GitHub Pages, your game will be available at:
 
@@ -10,7 +10,7 @@ After enabling GitHub Pages, your game will be available at:
 https://updesh1.github.io/snake_game_javascript/
 ```
 
-## ✨ Features
+## Features
 
 * Smooth snake movement
 * Responsive keyboard controls
@@ -20,14 +20,14 @@ https://updesh1.github.io/snake_game_javascript/
 * Restart game functionality
 * Clean and responsive user interface
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * HTML5
 * CSS3
 * JavaScript (ES6)
 * HTML5 Canvas
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 snake_game_javascript/
@@ -39,7 +39,7 @@ snake_game_javascript/
 └── LICENSE (optional)
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Clone the repository
 
@@ -69,7 +69,7 @@ Then open:
 http://localhost:8000
 ```
 
-## 🎮 Controls
+## Controls
 
 | Key | Action     |
 | --- | ---------- |
@@ -78,7 +78,7 @@ http://localhost:8000
 | ←   | Move Left  |
 | →   | Move Right |
 
-## 📸 Screenshot
+## Screenshot
 
 Add a screenshot of your game here.
 
@@ -89,7 +89,7 @@ screenshots/
 └── gameplay.png
 ```
 
-## 🔮 Future Improvements
+## Future Improvements
 
 * High score system
 * Pause and resume
@@ -99,7 +99,7 @@ screenshots/
 * Dark/Light themes
 * Animated start screen
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome.
 
@@ -109,11 +109,11 @@ Contributions are welcome.
 4. Push the branch.
 5. Open a Pull Request.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
-## 👨‍💻 Author
+## Author
 
 **Updesh Chauhan**
 
